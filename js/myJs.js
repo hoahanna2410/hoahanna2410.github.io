@@ -17,6 +17,7 @@ function firstQuestion(){
     $('.content').hide();
     Swal.fire({
         title: 'He luu anh yeu!',
+        colorText: 'black',
         text: 'Em có điều này muốn hỏi Anh nhớ phải trả lời thật lòng nhaaa.',
         imageUrl: '../image/hoa.jpg',
         imageWidth: 300,
