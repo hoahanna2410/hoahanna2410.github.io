@@ -124,7 +124,7 @@ $('#yes').click(function() {
                 width: 900,
                 confirmButtonText: 'Bấm vô đây để nghe nha <3',
                 background: '#fff url("../image/timbay.gif")',
-                title: 'Em biết mà ^^ Yêu em 300.000',
+                title: 'Em biết mà ^^ Yêu anh 300.000',
                 text: "I lớp u chụt chụt :v Tặng anh bài này nè <3 .",
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
