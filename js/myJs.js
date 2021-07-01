@@ -1,5 +1,6 @@
 $(document).ready(function() {
     // process bar
+    
     setTimeout(function() {
         firstQuestion();
         $('.spinner').fadeOut();
@@ -9,43 +10,18 @@ $(document).ready(function() {
         });
     }, 600);
 })
-const yourDate = new Date("2019-10-29T02:10:26"),
-music = ['ido', 'noinaycoanh', 'nguoiamphu'];
 
-document.addEventListener('DOMContentLoaded', function(){
-      var rootTime = document.querySelector("time");
-
-      document.querySelector("anni").textContent = `${(yourDate.getDate()>9)?yourDate.getDate():"0"+yourDate.getDate()}-${(yourDate.getMonth()>8)?(yourDate.getMonth()+1):"0"+(yourDate.getMonth()+1)}-${yourDate.getFullYear()}`;
-      
-      document.querySelector("date").textContent = Math.floor( Math.floor((new Date() - yourDate) / 1000) / 60 / 60 / 24)+" DAYS";
-
-      function olock() {
-            var today = new Date(),
-            hrs = (Math.floor( Math.floor((today - yourDate) / 1000) / 60 / 60)) % 24,
-            min = (Math.floor( Math.floor((today - yourDate) / 1000) / 60)) % 60,
-            sec =  Math.floor((today - yourDate) / 1000) % 60;
-            rootTime.textContent = `${(hrs>9)?hrs:"0"+hrs}:${(min>9)?min:"0"+min}:${(sec>9)?sec:"0"+sec}`;
-      } olock();
-      var timer = setInterval(function(){olock()}, 1000);
-      document.querySelector("audio").setAttribute("src", `music/${music[Math.floor(Math.random()*music.length)]}.mp3`);
-
-      document.getElementsByTagName("body")[0].insertAdjacentHTML(
-            "beforeend",
-            "<div id='mask'></div>"
-      );
-
-}, false);
 
 function firstQuestion(){
     
     $('.content').hide();
     Swal.fire({
-        title: 'He luu bấy bề!',
-        text: 'Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa.',
-        imageUrl: 'img/cuteCat.jpg',
+        title: 'He luu anh yeu!',
+        text: 'Em có điều này muốn hỏi Anh nhớ phải trả lời thật lòng nhaaa.',
+        imageUrl: '../image/hoa.jpg',
         imageWidth: 300,
         imageHeight: 300,
-        background: '#fff url("img/iput-bg.jpg")',
+        background: 'lightseagreen',
         imageAlt: 'Custom image',
       }).then(function(){
         $('.content').show(200);
@@ -54,7 +30,7 @@ function firstQuestion(){
 
  // switch button position
  function switchButton() {
-    var audio = new Audio('sound/duck.mp3');
+    var audio = new Audio('../sound/duck.wav');
     audio.play();
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
@@ -67,7 +43,7 @@ function firstQuestion(){
 }
 // move random button póition
 function moveButton() {
-    var audio = new Audio('sound/Swish1.mp3');
+    var audio = new Audio('../sound/duck.wav');
     audio.play();
     if (screen.width<=600) {
         var x = Math.random() * 300;
@@ -99,7 +75,7 @@ $('#no').click(() => {
 // generate text in input
 function textGenerate() {
     var n = "";
-    var text = " Tại vì anh dễ thương vl lại còn đẹp trai nữa :<<<<<<< ";
+    var text = " Tại vì anh dễ thương vl:<<<<<<< ";
     var a = Array.from(text);
     var textVal = $('#txtReason').val() ? $('#txtReason').val() : "";
     var count = textVal.length;
@@ -122,16 +98,16 @@ $('#yes').click(function() {
     var audio = new Audio('sound/tick.mp3');
     audio.play();
     Swal.fire({
-        title: 'Nói cho anh lí do em thích anh đi :vvvv',
+        title: 'Nói cho em lí do anh thích em đi :vvvv',
         html: true,
         width: 900,
         padding: '3em',
         html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Nhập vô đây nhaaaa.'>",
-        background: '#fff url("img/iput-bg.jpg")',
+        background: 'lightseagreen',
         backdrop: `
               rgba(0,0,123,0.4)
-              url("img/giphy2.gif")
-              left top
+              url("../image/thocute.gif")
+              top center
               no-repeat
             `,
         showCancelButton: true,
@@ -146,12 +122,12 @@ $('#yes').click(function() {
             Swal.fire({
                 width: 900,
                 confirmButtonText: 'Bấm vô đây để nghe nha <3',
-                background: '#fff url("img/iput-bg.jpg")',
-                title: 'Anh biết mà ^^ Yêu em 300.000',
-                text: "I lớp u chụt chụt :v Tặng em bài này nè <3 .",
+                background: '#fff url("../image/timbay.gif")',
+                title: 'Em biết mà ^^ Yêu em 300.000',
+                text: "I lớp u chụt chụt :v Tặng anh bài này nè <3 .",
                 confirmButtonColor: '#83d0c9',
                 onClose: () => {
-                    window.location = 'https://www.youtube.com/watch?v=BZYp-6D0SDY';
+                    window.location = 'https://youtu.be/Orv_t0KgEB8';
                   }
             })
         }
