@@ -19,7 +19,7 @@ function firstQuestion(){
         title: 'He luu anh yeu!',
         colorText: 'black',
         text: 'Em có điều này muốn hỏi Anh nhớ phải trả lời thật lòng nhaaa.',
-        imageUrl: '../image/hoa.jpg',
+        imageUrl: '../image/thocute.gif',
         imageWidth: 300,
         imageHeight: 300,
         background: 'lightseagreen',
